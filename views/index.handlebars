@@ -1,0 +1,78 @@
+<div class="container">
+
+  <!-- Header -->
+  <header class="jumbotron bg-primary text-white text-center mt-3 mb-2">
+    <h1>Local News Viewer</h1>
+    <h2><i class='far fa-newspaper'></i></h2>
+    <p>Source: <a href="https://www.kptv.com/news/" target="_blank">KPTV - FOX 12</a></p>
+  </header>
+
+  {{!-- Refresh button --}}
+  <div class="row">
+    <div class="col text-center">
+      <button class="btn btn-success btn-lg btn-block mb-2" id="refresh-button">Refresh</button>
+    </div>
+  </div>
+
+  {{!-- Articles --}}
+  <div class="row mb-2">
+    <div class="col">
+
+      {{#each articles}}
+
+      <div class="card mb-1">
+
+        {{!-- Headline --}}
+        <div class="card-header">
+          <h3>{{headline}}</h3>
+        </div>
+
+        {{!-- Article card --}}
+        <div class="card-body">
+          <p><a href="{{url}}" target="_blank">{{url}}</a></p>
+          <p class="text-muted ">Posted/Updated at {{postedAt}}</p>
+
+          {{!-- Add comment --}}
+          <div class="input-group mb-3">
+            <input type="text" class="comment-input form-control" style="width: 30%"
+              placeholder="Your comment (required)">
+            <input type="text" class="nickname-input form-control" placeholder="Your nickname (required)">
+            <div class="input-group-append">
+              <button class="comment-button btn btn-warning" type="button" data-id="{{_id}}">Add Comment</button>
+            </div>
+          </div>
+
+          {{!-- Comments --}}
+          <div class="comments-div" style="max-height: 200px; overflow-y: auto;">
+            {{#each comments}}
+            <div class="card mt-1">
+              <div class="card-body py-2">
+                {{text}}
+                <button class="delete-button btn btn-outline-danger btn-sm mx-1" data-id="{{_id}}">Delete</button>
+              </div>
+              <div class="card-footer text-muted py-1">
+                <small>Added at {{addedAt}} by {{nickname}}</small>
+              </div>
+            </div>
+            {{/each}}
+          </div>
+
+        </div>
+
+      </div>
+
+      {{/each}}
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="card bg-secondary text-center mb-2">
+    <div class="card-body">
+      <p class="m-0">
+        <a href="/api/articles" class="text-white">Articles API</a>
+      </p>
+    </div>
+  </footer>
+
+</div>
