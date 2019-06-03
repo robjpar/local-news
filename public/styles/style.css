@@ -1,0 +1,22 @@
+/* Styling customization */
+
+body {
+  background-image: url('/images/linedpaper/linedpaper.png');
+}
+
+body::-webkit-scrollbar {
+  width: 10px !important;
+}
+
+.comments-div::-webkit-scrollbar {
+  width: 5px !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: darkslategray;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: darkgray;
+}
