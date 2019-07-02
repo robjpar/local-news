@@ -1,9 +1,35 @@
-# local-news-viewer
+# Local New Viewer
 
-## Description
+![local-news-viewer](images/local-news-viewer.png 'Local News Viewer')
 
-Implementation of a local news viewer web application. The application allows users to view latest local news and leave comments. Utilizes Node.js, Express with Handlebars, MongoDB with Mongoose, and web scraping with Axios and Cheerio. Deployed on Heroku.
+Local News Viewer is a web application which allows users to view latest local news and leave comments.
 
-## How to use
+## Features
 
-Access the deployed application through this link [local-news-viewer](https://local-news-viewer.herokuapp.com/). Follow on-screen instructions.
+- Browsing local news by headlines
+- Quick access to full-texts
+- Adding/deleting comments
+- Mobile responsive design
+
+## Technologies & Frameworks
+
+- Node.js, Express, Handlebars
+- cheerio
+- MongoDB, Mongoose ORM
+- Heroku platform
+
+## Source of News
+
+- KPTV - FOX 12
+
+## Installation
+
+No installation is needed. Access the deployed website with a web browser through this link [local-news-viewer](https://local-news-viewer.herokuapp.com/).
+
+## Usage
+
+Follow the on-screen instructions.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
