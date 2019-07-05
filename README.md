@@ -13,6 +13,7 @@ Local News Viewer is a web application which allows users to view latest local n
 
 ## Technologies & Frameworks
 
+- JavaScript, AJAX, RESTful API
 - Node.js, Express, Handlebars
 - cheerio
 - MongoDB, Mongoose ORM
