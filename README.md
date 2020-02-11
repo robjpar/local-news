@@ -1,4 +1,4 @@
-# Local New Viewer
+# Local News Viewer
 
 ![local-news-viewer](images/local-news-viewer.png 'Local News Viewer')
 
